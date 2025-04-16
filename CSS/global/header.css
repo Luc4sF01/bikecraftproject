@@ -1,34 +1,3 @@
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
-  background-color: #f5f3f7;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-h1 , h2 , h3 , p {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-}
-
-a{
-  text-decoration: none;
- 
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-ul {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-}
-
 .header{
   flex-wrap: wrap;
   gap: 20px ;
@@ -43,8 +12,9 @@ ul {
 }
 
 .header-bg {
-    background-color: #000;
+  background-color: var(--cor-12);
 }
+
 
 .header-menu {
 display: flex;
@@ -59,6 +29,8 @@ gap: 40px;
   font-size: 18px;
   font-weight: 600;
   position: relative;
+  font-family: "Poppins";
+  font-weight: 600;
 }
 
 .header-menu a:after {
@@ -96,7 +68,7 @@ gap: 40px;
 }
 
 @media (max-width: 600px){
-  header-menu{
+  .header-menu{
     gap: 12px;
   }
   .header-menu a {

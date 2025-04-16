@@ -1,0 +1,120 @@
+
+   :root {
+    --cor-p1: #ffd000;
+    --cor-p2: #cca000;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  
+
+  .depoimento {
+    background-color: var(--cor-p1);
+    padding: 60px 0;
+    overflow: hidden;
+  }
+  
+  .depoimento-conteudo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: end;
+  }
+  
+  .depoimento img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 0px;
+  }
+  
+  .depoimento-conteudo {
+    position: relative;
+    padding: 40px;
+  }
+  
+  .depoimento-conteudo p {
+    max-width: 32ch;
+    font-family: Merriweather, serif;
+    font-style: italic;
+    font-weight: 900;
+    margin-bottom: 24px;
+    position: relative;
+    word-break: break-word;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .depoimento-conteudo p::before {
+    content: "“";
+    font-size: 4rem;
+    color: var(--cor-p2);
+    position: absolute;
+    left: -40px;
+    top: -20px;
+  }
+  
+  .depoimento-conteudo p::after {
+    content: "”";
+    font-size: 4rem;
+    color: var(--cor-p2);
+    position: absolute;
+    
+  }
+  
+  .depoimento-conteudo span {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: #333;
+    text-align: right;
+  }
+  
+  @media (max-width: 992px) {
+    .depoimento-conteudo-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .depoimento-conteudo {
+      padding: 32px 0;
+      text-align: center;
+    }
+    .depoimento-conteudo p::before {
+      font-size: 3rem;
+      left: 0;
+      top: -10px;
+    }
+    .depoimento-conteudo p::after {
+      font-size: 3rem;
+      
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .depoimento {
+      padding: 40px 0;
+    }
+    .depoimento-conteudo {
+      padding: 24px 16px;
+    }
+    .depoimento-conteudo p {
+      max-width: 100%;
+      margin-bottom: 16px;
+    }
+    .depoimento-conteudo p::before,
+    .depoimento-conteudo p::after {
+      font-size: 2.5rem;
+    }
+  }
+  
