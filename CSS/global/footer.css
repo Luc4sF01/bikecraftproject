@@ -120,3 +120,11 @@
     margin-top: 16px;
   }
 }
+
+@media (max-width: 800px) {
+  .footer > img{
+display: none;
+  }
+  
+
+}
