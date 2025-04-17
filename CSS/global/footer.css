@@ -40,3 +40,83 @@
   grid-column: 1/-1;
   margin-top: 40px;
 }
+@media (max-width: 1200px) {
+  .footer {
+    grid-template-columns: 2fr 3fr 2fr;
+    gap: 32px;
+    padding: 48px 0;
+  }
+}
+
+/* 2) Tablet Paisagem / Largura ≤ 992px */
+@media (max-width: 992px) {
+  .footer img {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 40px 0;
+  }
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 40px 0;
+  }
+  /* Faz o copyright ficar embaixo das colunas */
+  .footer-copy {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 32px;
+  }
+}
+
+/* 3) Tablet Retrato / Largura ≤ 768px */
+@media (max-width: 768px) {
+  .footer img {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 40px 0;
+  }
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 32px 0;
+    text-align: center;
+  }
+  .footer-contato,
+  .footer-informacoes {
+    margin: 0 auto;
+  }
+  .footer-redes {
+    justify-content: center;
+  }
+  .footer-copy {
+    margin-top: 24px;
+  }
+}
+
+/* 4) Celular / Largura ≤ 576px */
+@media (max-width: 576px) {
+  .footer img {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 40px 0;
+    align-self: center;
+  }
+  .footer {
+    padding: 24px 0;
+    gap: 16px;
+  }
+  .footer h3 {
+    margin-bottom: 16px;
+  }
+  .footer-contato ul,
+  .footer-informacoes ul {
+    margin-bottom: 16px;
+  }
+  .footer-redes {
+    gap: 16px;
+  }
+  .footer-copy {
+    font-size: 0.9rem;
+    margin-top: 16px;
+  }
+}
